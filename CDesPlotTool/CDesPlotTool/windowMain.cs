@@ -35,6 +35,7 @@ using bytes = org.pdfclown.bytes;
 // Add oversize file catch
 // Dynamic update of price from radial buttons
 // General clean up and seperation of code
+// Add functionality to manually enter data, a calculator
 // Add functionality for multiple fiel selection, place in own container for auto population
 // Add functionality to populate individual containers for each file
 // Add functionality to select different papers for different files
