@@ -126,6 +126,7 @@
             // 
             // paperSelectSatin
             // 
+            this.paperSelectSatin.AccessibleRole = System.Windows.Forms.AccessibleRole.RadioButton;
             this.paperSelectSatin.AutoSize = true;
             this.paperSelectSatin.Location = new System.Drawing.Point(425, 102);
             this.paperSelectSatin.Name = "paperSelectSatin";
@@ -138,6 +139,7 @@
             // 
             // paperSelectMatte
             // 
+            this.paperSelectMatte.AccessibleRole = System.Windows.Forms.AccessibleRole.RadioButton;
             this.paperSelectMatte.AutoSize = true;
             this.paperSelectMatte.Location = new System.Drawing.Point(425, 79);
             this.paperSelectMatte.Name = "paperSelectMatte";
@@ -150,6 +152,7 @@
             // 
             // paperSelectBond
             // 
+            this.paperSelectBond.AccessibleRole = System.Windows.Forms.AccessibleRole.RadioButton;
             this.paperSelectBond.AutoSize = true;
             this.paperSelectBond.Location = new System.Drawing.Point(424, 56);
             this.paperSelectBond.Name = "paperSelectBond";
@@ -188,7 +191,6 @@
 
         #endregion
 
-        private DevComponents.DotNetBar.ButtonX buttonFileBrowse;
         private DevComponents.DotNetBar.Controls.TextBoxX textboxFileName;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private DevComponents.DotNetBar.Controls.TextBoxX textboxNumPages;
@@ -198,5 +200,6 @@
         private System.Windows.Forms.RadioButton paperSelectSatin;
         private System.Windows.Forms.RadioButton paperSelectMatte;
         private System.Windows.Forms.RadioButton paperSelectBond;
+        public DevComponents.DotNetBar.ButtonX buttonFileBrowse;
     }
 }

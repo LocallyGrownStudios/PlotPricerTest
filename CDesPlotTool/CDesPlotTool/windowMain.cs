@@ -2,7 +2,10 @@
 using System.Xml;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Windows;
+using System.Windows.Controls;
 using System.Web;
+using System.Web.UI;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -56,7 +59,7 @@ namespace CDesPlotTool
 
         }
 
-        private void buttonFileBrowse_Click(object sender, EventArgs e)
+        public void buttonFileBrowse_Click(object sender, EventArgs e)
         {
             itemPanel1.Controls.Clear();                                                                              // Clears everything in itemPanel1
             textboxFileName.Clear();                                                                                  // Clears content of textboxFileName
@@ -85,7 +88,7 @@ namespace CDesPlotTool
                 int sourcePagesCount = sourcePages.Count;
                 int documentPageCount = documentPages.Count;
                 long incrementalDataSize = 0;
-                foreach (Page page in documentPages)
+                foreach (org.pdfclown.documents.Page page in documentPages)
                 {
                     long pageFullDataSize = PageManager.GetSize(page);
                     long pageDifferentialDataSize = PageManager.GetSize(page, visitedReferences);
@@ -149,6 +152,7 @@ namespace CDesPlotTool
                         itemPanel1.Controls.Add(pageSizes);
                         itemPanel1.Controls.Add(pageCost);
                     }
+
                 }
 
                 try
@@ -185,14 +189,14 @@ namespace CDesPlotTool
                 {
 
                 }
+
             }
 
         }
 
-        
-        public void paperSelectBond_CheckedChanged(object sender, EventArgs e)
-        {  
-            // update price
+        protected void paperSelectBond_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
 
         public void paperSelectMatte_CheckedChanged(object sender, EventArgs e)
