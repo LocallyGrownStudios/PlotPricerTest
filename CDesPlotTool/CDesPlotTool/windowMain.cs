@@ -35,8 +35,12 @@ using bytes = org.pdfclown.bytes;
 // Add oversize file catch
 // Dynamic update of price from radial buttons
 // General clean up and seperation of code
+// Add functionality for multiple fiel selection, place in own container for auto population
+// Add functionality to populate individual containers for each file
+// Add functionality to select different papers for different files
 // Add functionality for laser printer prices
 // Add functionality to save file as reduced size, rasterized and x1-a compatible
+// ** possible page viewer
 // ** Possible functionality to submit plots/prints
 // ** Possible functionality to charge themselves for plots/prints
 
@@ -225,9 +229,9 @@ namespace CDesPlotTool
 
         }
 
-        protected void paperSelectBond_CheckedChanged(object sender, EventArgs e)
+        public void paperSelectBond_CheckedChanged(object sender, EventArgs e)
         {
-
+            // update price
         }
 
         public void paperSelectMatte_CheckedChanged(object sender, EventArgs e)
