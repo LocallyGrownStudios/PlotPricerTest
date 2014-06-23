@@ -45,16 +45,16 @@
       <HintPath>D:\Program Files (x86)\DotNetBar for Windows Forms\DevComponents.DotNetBar2.dll</HintPath>
     </Reference>
     <Reference Include="itextsharp">
-      <HintPath>D:\Documents\iTextSharp\itextsharp.dll</HintPath>
+      <HintPath>..\..\..\..\..\Desktop\New folder\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="itextsharp.pdfa">
-      <HintPath>D:\Documents\iTextSharp\itextsharp.pdfa.dll</HintPath>
+      <HintPath>..\..\..\..\..\Desktop\New folder\itextsharp.pdfa.dll</HintPath>
     </Reference>
     <Reference Include="itextsharp.xtra">
-      <HintPath>D:\Documents\iTextSharp\itextsharp.xtra.dll</HintPath>
+      <HintPath>..\..\..\..\..\Desktop\New folder\itextsharp.xtra.dll</HintPath>
     </Reference>
     <Reference Include="PDFClown">
-      <HintPath>D:\Documents\PDFClown\dotNET\pdfclown.lib\build\package\PDFClown.dll</HintPath>
+      <HintPath>..\..\..\..\..\Desktop\New folder\PDFClown\dotNET\pdfclown.lib\build\package\PDFClown.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -68,7 +68,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ButtonHandler.cs">
+    <Compile Include="DataHandler.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainWindow.cs">

@@ -16,3 +16,17 @@ C:\Users\Nicholas\Documents\GitHub\PlotPricerTest\CDesPlotTool\CDesPlotTool\bin\
 C:\Users\Nicholas\Documents\GitHub\PlotPricerTest\CDesPlotTool\CDesPlotTool\bin\Debug\CDesPlotTool.application
 C:\Users\Nicholas\Documents\GitHub\PlotPricerTest\CDesPlotTool\CDesPlotTool\obj\Debug\CDesPlotTool.exe.manifest
 C:\Users\Nicholas\Documents\GitHub\PlotPricerTest\CDesPlotTool\CDesPlotTool\obj\Debug\CDesPlotTool.application
+C:\Users\krame407\Documents\GitHub\PlotPricerTest\CDesPlotTool\CDesPlotTool\bin\Debug\CDesPlotTool.exe.config
+C:\Users\krame407\Documents\GitHub\PlotPricerTest\CDesPlotTool\CDesPlotTool\obj\Debug\CDesPlotTool.exe
+C:\Users\krame407\Documents\GitHub\PlotPricerTest\CDesPlotTool\CDesPlotTool\obj\Debug\CDesPlotTool.pdb
+C:\Users\krame407\Documents\GitHub\PlotPricerTest\CDesPlotTool\CDesPlotTool\obj\Debug\CDesPlotTool.csprojResolveAssemblyReference.cache
+C:\Users\krame407\Documents\GitHub\PlotPricerTest\CDesPlotTool\CDesPlotTool\obj\Debug\CDesPlotTool.Properties.Resources.resources
+C:\Users\krame407\Documents\GitHub\PlotPricerTest\CDesPlotTool\CDesPlotTool\obj\Debug\CDesPlotTool.windowMain.resources
+C:\Users\krame407\Documents\GitHub\PlotPricerTest\CDesPlotTool\CDesPlotTool\obj\Debug\CDesPlotTool.csproj.GenerateResource.Cache
+C:\Users\krame407\Documents\GitHub\PlotPricerTest\CDesPlotTool\CDesPlotTool\bin\Debug\CDesPlotTool.exe.manifest
+C:\Users\krame407\Documents\GitHub\PlotPricerTest\CDesPlotTool\CDesPlotTool\bin\Debug\CDesPlotTool.application
+C:\Users\krame407\Documents\GitHub\PlotPricerTest\CDesPlotTool\CDesPlotTool\bin\Debug\CDesPlotTool.exe
+C:\Users\krame407\Documents\GitHub\PlotPricerTest\CDesPlotTool\CDesPlotTool\bin\Debug\CDesPlotTool.pdb
+C:\Users\krame407\Documents\GitHub\PlotPricerTest\CDesPlotTool\CDesPlotTool\bin\Debug\itextsharp.xml
+C:\Users\krame407\Documents\GitHub\PlotPricerTest\CDesPlotTool\CDesPlotTool\obj\Debug\CDesPlotTool.exe.manifest
+C:\Users\krame407\Documents\GitHub\PlotPricerTest\CDesPlotTool\CDesPlotTool\obj\Debug\CDesPlotTool.application

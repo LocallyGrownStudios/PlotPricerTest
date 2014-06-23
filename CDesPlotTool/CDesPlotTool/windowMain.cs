@@ -85,7 +85,7 @@ namespace CDesPlotTool
             openFileDialog1.FilterIndex = 1;                                                                          // Sets the default file type to be selected
             openFileDialog1.RestoreDirectory = true;                                                                  // Sets wheter or not default directory is restored each time
             const double postScriptPoints = 72.00;                                                                    // Assign postScriptPoints as a constant int
-            int size = -1;                                                                                            // Assign size as an integer
+            int size = 0;                                                                                            // Assign size as an integer
             double sizeKB = -1.0;                                                                                     // Assign sizeKB as a double
             double sizeMB = -1.0;                                                                                     // Assign sizeMB as a double
             double sizeGB = -1.0;                                                                                     // Assign sizeGB as a double
@@ -97,7 +97,6 @@ namespace CDesPlotTool
             {
                 HashSet<PdfReference> visitedReferences = new HashSet<PdfReference>();
                 PdfReader reader = new PdfReader(openFileDialog1.FileName);
-                iTextSharp.text.Rectangle mediabox = reader.GetPageSize(1);
                 org.pdfclown.documents.Document documentName = currentFile.Document;
                 Pages sourcePages = sourceFile.Document.Pages;
                 Pages documentPages = documentName.Pages;
@@ -106,18 +105,20 @@ namespace CDesPlotTool
                 long incrementalDataSize = 0;
                 foreach (org.pdfclown.documents.Page page in documentPages)
                 {
+                    size++;
+                    iTextSharp.text.Rectangle mediabox = reader.GetPageSize(size);
                     long pageFullDataSize = PageManager.GetSize(page);
                     long pageDifferentialDataSize = PageManager.GetSize(page, visitedReferences);
                     incrementalDataSize += pageDifferentialDataSize;
                     TextBox pageSizes = new TextBox();
                     pageSizes.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
                     pageSizes.Enabled = false;
-                    pageSizes.Name = "pageCost_" + this.Controls.Count + 1;
+                    pageSizes.Name = "pageSize_" + this.Controls.Count + 1;
                     pageSizes.Location = new System.Drawing.Point(25, 10 + (25 * itemPanel1.Controls.Count));
                     TextBox pageCost = new TextBox();
                     pageCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
                     pageCost.Enabled = false;
-                    pageCost.Name = "pageSize_" + this.Controls.Count + 1;
+                    pageCost.Name = "pageCost_" + this.Controls.Count + 1;
                     pageCost.Location = new System.Drawing.Point(150, 10 + (25 * itemPanel1.Controls.Count));
                     if (mediabox.Height / postScriptPoints <= 42)
                     {
