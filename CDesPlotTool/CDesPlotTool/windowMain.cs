@@ -129,7 +129,7 @@ namespace CDesPlotTool
                             if (paperSelectBond.Checked)
                             {
                                 pageCost.Text += "$ ";
-                                totalCost = mediabox.Height / postScriptPoints * 1/12;
+                                totalCost = mediabox.Height / postScriptPoints * 1 / 12;
                                 totalCost = Math.Round(totalCost, 2);
                                 pageCost.Text += string.Format("{0:f2}", totalCost);
                             }
@@ -155,7 +155,7 @@ namespace CDesPlotTool
                             itemPanel1.Controls.Add(pageCost);
                         }
                     }
-                    else
+                    else if (mediabox.Width / postScriptPoints <= 42)
                     {
                         pageSizes.Text += mediabox.Width / postScriptPoints;
                         pageSizes.Text += " x ";
@@ -187,6 +187,31 @@ namespace CDesPlotTool
                         }
                         itemPanel1.Controls.Add(pageSizes);
                         itemPanel1.Controls.Add(pageCost);
+
+                    }
+                    else
+                    {
+                        pageSizes.Text += mediabox.Width / postScriptPoints;
+                        pageSizes.Text += " x ";
+                        pageSizes.Text += mediabox.Height / postScriptPoints;
+                        if (paperSelectBond.Checked)
+                        {
+                            pageCost.Text += "Not Printable";
+                        }
+                        else if (paperSelectMatte.Checked)
+                        {
+                            pageCost.Text += "Not Printable";
+                        }
+                        else if (paperSelectSatin.Checked)
+                        {
+                            pageCost.Text += "Not Printable";
+                        }
+                        else
+                        {
+                            pageCost.Text += "Please choose paper type";
+                        }
+                        itemPanel1.Controls.Add(pageSizes);
+                        itemPanel1.Controls.Add(pageCost);
                     }
 
                 }
@@ -205,19 +230,23 @@ namespace CDesPlotTool
 
                     if (sizeMB >= 1)                                                                                       // If size is larger than or equal to 1 KB
                     {
+                        textboxFileSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
                         textboxFileSize.Text += sizeMB;                                                                    // Write size as MB to textboxFileSize
                         textboxFileSize.Text += " MB";                                                                     // Write MB after size to textboxFileSize
                     }
                     else if (sizeGB >= 1)                                                                                  // Else if size is  larger tgab or equal to 1 GB
                     {
+                        textboxFileSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
                         textboxFileSize.Text += sizeGB;                                                                    // Write size as GB to textboxFileSize  
                         textboxFileSize.Text += " GB";                                                                     // Write GB after size to textboxFileSize
                     }
                     else
                     {
+                        textboxFileSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
                         textboxFileSize.Text += size / 1024;                                                               // Else write size as KB to textboxFileSize
                         textboxFileSize.Text += " KB";                                                                     // Write KB after size to textboxFileSize
                     }
+                    textboxNumPages.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
                     textboxFileName.Text += file;                                                                          // Write file path and name to textboxFileName
                     textboxNumPages.Text += sourcePages.Count;
                 }
