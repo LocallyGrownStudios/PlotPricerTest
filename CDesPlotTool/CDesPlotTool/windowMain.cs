@@ -69,11 +69,12 @@ namespace CDesPlotTool
             openFileDialog1.Filter = "PDF Files (*.pdf)|*.pdf|All files (*.*)|*.*";                                   // Sets the filter of selectable files
             openFileDialog1.FilterIndex = 1;                                                                          // Sets the default file type to be selected
             openFileDialog1.RestoreDirectory = true;                                                                  // Sets wheter or not default directory is restored each time
-            const int postScriptPoints = 72;                                                                          // Assign postScriptPoints as a constant int
+            const double postScriptPoints = 72.00;                                                                          // Assign postScriptPoints as a constant int
             int size = -1;                                                                                            // Assign size as an integer
             double sizeKB = -1.0;                                                                                     // Assign sizeKB as a double
             double sizeMB = -1.0;                                                                                     // Assign sizeMB as a double
             double sizeGB = -1.0;                                                                                     // Assign sizeGB as a double
+            double totalCost = 0.00;
             DialogResult result = openFileDialog1.ShowDialog();                                                       // Opens file explore window
             string file = openFileDialog1.FileName;
             using (File currentFile = new File(openFileDialog1.FileName))                                             // Using selected file as current file      
@@ -94,10 +95,12 @@ namespace CDesPlotTool
                     long pageDifferentialDataSize = PageManager.GetSize(page, visitedReferences);
                     incrementalDataSize += pageDifferentialDataSize;
                     TextBox pageSizes = new TextBox();
+                    pageSizes.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
                     pageSizes.Enabled = false;
                     pageSizes.Name = "pageCost_" + this.Controls.Count + 1;
                     pageSizes.Location = new System.Drawing.Point(25, 10 + (25 * itemPanel1.Controls.Count));
                     TextBox pageCost = new TextBox();
+                    pageCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
                     pageCost.Enabled = false;
                     pageCost.Name = "pageSize_" + this.Controls.Count + 1;
                     pageCost.Location = new System.Drawing.Point(150, 10 + (25 * itemPanel1.Controls.Count));
@@ -110,15 +113,24 @@ namespace CDesPlotTool
                             pageSizes.Text += mediabox.Width / postScriptPoints;
                             if (paperSelectBond.Checked)
                             {
-                                pageCost.Text += (mediabox.Height / postScriptPoints) * 1/12;
+                                pageCost.Text += "$ ";
+                                totalCost = mediabox.Height / postScriptPoints * 1/12;
+                                totalCost = Math.Round(totalCost, 2);
+                                pageCost.Text += string.Format("{0:f2}", totalCost);
                             }
                             else if (paperSelectMatte.Checked)
                             {
-                                pageCost.Text += mediabox.Height / postScriptPoints * 1/4;
+                                pageCost.Text += "$ ";
+                                totalCost = mediabox.Height / postScriptPoints * 1 / 4;
+                                totalCost = Math.Round(totalCost, 2);
+                                pageCost.Text += string.Format("{0:f2}", totalCost);
                             }
                             else if (paperSelectSatin.Checked)
                             {
-                                pageCost.Text += mediabox.Height / postScriptPoints * 1/4;
+                                pageCost.Text += "$ ";
+                                totalCost = mediabox.Height / postScriptPoints * 1 / 4;
+                                totalCost = Math.Round(totalCost, 2);
+                                pageCost.Text += string.Format("{0:f2}", totalCost);
                             }
                             else
                             {
@@ -135,15 +147,24 @@ namespace CDesPlotTool
                         pageSizes.Text += mediabox.Height / postScriptPoints;
                         if (paperSelectBond.Checked)
                         {
-                            pageCost.Text += mediabox.Height / postScriptPoints * 1/12;
+                            pageCost.Text += "$ ";
+                            totalCost = mediabox.Height / postScriptPoints * 1 / 12;
+                            totalCost = Math.Round(totalCost, 2);
+                            pageCost.Text += string.Format("{0:f2}", totalCost);
                         }
                         else if (paperSelectMatte.Checked)
                         {
-                            pageCost.Text += mediabox.Height / postScriptPoints * 1/4;
+                            pageCost.Text += "$ ";
+                            totalCost = mediabox.Height / postScriptPoints * 1 / 4;
+                            totalCost = Math.Round(totalCost, 2);
+                            pageCost.Text += string.Format("{0:f2}", totalCost);
                         }
                         else if (paperSelectSatin.Checked)
                         {
-                            pageCost.Text += mediabox.Height / postScriptPoints * 1/4;
+                            pageCost.Text += "$ ";
+                            totalCost = mediabox.Height / postScriptPoints * 1 / 4;
+                            totalCost = Math.Round(totalCost, 2);
+                            pageCost.Text += string.Format("{0:f2}", totalCost);
                         }
                         else
                         {

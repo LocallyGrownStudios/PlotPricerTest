@@ -12,3 +12,7 @@ C:\Users\Nicholas\Documents\GitHub\PlotPricerTest\CDesPlotTool\CDesPlotTool\bin\
 C:\Users\Nicholas\Documents\GitHub\PlotPricerTest\CDesPlotTool\CDesPlotTool\bin\Debug\PDFClown.dll
 C:\Users\Nicholas\Documents\GitHub\PlotPricerTest\CDesPlotTool\CDesPlotTool\bin\Debug\itextsharp.xml
 C:\Users\Nicholas\Documents\GitHub\PlotPricerTest\CDesPlotTool\CDesPlotTool\obj\Debug\CDesPlotTool.csprojResolveAssemblyReference.cache
+C:\Users\Nicholas\Documents\GitHub\PlotPricerTest\CDesPlotTool\CDesPlotTool\bin\Debug\CDesPlotTool.exe.manifest
+C:\Users\Nicholas\Documents\GitHub\PlotPricerTest\CDesPlotTool\CDesPlotTool\bin\Debug\CDesPlotTool.application
+C:\Users\Nicholas\Documents\GitHub\PlotPricerTest\CDesPlotTool\CDesPlotTool\obj\Debug\CDesPlotTool.exe.manifest
+C:\Users\Nicholas\Documents\GitHub\PlotPricerTest\CDesPlotTool\CDesPlotTool\obj\Debug\CDesPlotTool.application
