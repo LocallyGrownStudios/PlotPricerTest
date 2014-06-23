@@ -30,6 +30,16 @@ using io = System.IO;
 using files = org.pdfclown.files;
 using bytes = org.pdfclown.bytes;
 
+
+//  TO DO
+// Add oversize file catch
+// Dynamic update of price from radial buttons
+// General clean up and seperation of code
+// Add functionality for laser printer prices
+// Add functionality to save file as reduced size, rasterized and x1-a compatible
+// ** Possible functionality to submit plots/prints
+// ** Possible functionality to charge themselves for plots/prints
+
 namespace CDesPlotTool
 {
     public partial class windowMain : Form
@@ -69,7 +79,7 @@ namespace CDesPlotTool
             openFileDialog1.Filter = "PDF Files (*.pdf)|*.pdf|All files (*.*)|*.*";                                   // Sets the filter of selectable files
             openFileDialog1.FilterIndex = 1;                                                                          // Sets the default file type to be selected
             openFileDialog1.RestoreDirectory = true;                                                                  // Sets wheter or not default directory is restored each time
-            const double postScriptPoints = 72.00;                                                                          // Assign postScriptPoints as a constant int
+            const double postScriptPoints = 72.00;                                                                    // Assign postScriptPoints as a constant int
             int size = -1;                                                                                            // Assign size as an integer
             double sizeKB = -1.0;                                                                                     // Assign sizeKB as a double
             double sizeMB = -1.0;                                                                                     // Assign sizeMB as a double
