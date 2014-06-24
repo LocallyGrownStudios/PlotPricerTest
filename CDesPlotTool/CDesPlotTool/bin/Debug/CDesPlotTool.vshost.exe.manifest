@@ -43,7 +43,7 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="DevComponents.DotNetBar2" version="11.8.0.5" publicKeyToken="7EB7C3A35B91DE04" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="DevComponents.DotNetBar2" version="11.8.0.4" publicKeyToken="7EB7C3A35B91DE04" language="neutral" processorArchitecture="msil" />
     </dependentAssembly>
   </dependency>
   <dependency>
@@ -59,7 +59,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>smV4nsE8jx1GPCtbxX3CCJFcOXVvhj4PURfD2pHVrgU=</dsig:DigestValue>
+        <dsig:DigestValue>/4Rl8l/rwDvprWPOGFozyPgzxGj6Cz6M2wHNmfYRlm4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

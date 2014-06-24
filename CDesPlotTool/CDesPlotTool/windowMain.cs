@@ -98,9 +98,7 @@ namespace CDesPlotTool
                 HashSet<PdfReference> visitedReferences = new HashSet<PdfReference>();
                 PdfReader reader = new PdfReader(openFileDialog1.FileName);
                 org.pdfclown.documents.Document documentName = currentFile.Document;
-                Pages sourcePages = sourceFile.Document.Pages;
                 Pages documentPages = documentName.Pages;
-                int sourcePagesCount = sourcePages.Count;
                 int documentPageCount = documentPages.Count;
                 long incrementalDataSize = 0;
                 foreach (org.pdfclown.documents.Page page in documentPages)
@@ -249,7 +247,7 @@ namespace CDesPlotTool
                     }
                     textboxNumPages.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
                     textboxFileName.Text += file;                                                                          // Write file path and name to textboxFileName
-                    textboxNumPages.Text += sourcePages.Count;
+                    textboxNumPages.Text += documentPages.Count;
                 }
                 catch (System.IO.IOException)
                 {
